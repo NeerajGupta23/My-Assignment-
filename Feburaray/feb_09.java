@@ -53,41 +53,41 @@ public class feb_09 {
 
 
 // ans 6:
-class Student1 {
-    private int age;
-    private String name;
-    public void setAge(int age) {
-        this.age = age;
-    }
-    public int getAge() {
-        return age;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-    public String getName() {
-        return name;
-    }
-    public void show() {
-        System.out.println(name + " " + age);
-    }
+// class Student1 {
+//     private int age;
+//     private String name;
+//     public void setAge(int age) {
+//         this.age = age;
+//     }
+//     public int getAge() {
+//         return age;
+//     }
+//     public void setName(String name) {
+//         this.name = name;
+//     }
+//     public String getName() {
+//         return name;
+//     }
+//     public void show() {
+//         System.out.println(name + " " + age);
+//     }
 
-}
+// }
 
-public class feb_09 {
-    public static void main(String[] args) {
-        Student1 obj = new Student();
-        Student1 obj1 = new Student();
-        obj.setAge(18);
-        obj1.setAge(25);
-        obj.setName("Navin");
-        obj1.setName("Kiran");
+// public class feb_09 {
+//     public static void main(String[] args) {
+//         Student1 obj = new Student();
+//         Student1 obj1 = new Student();
+//         obj.setAge(18);
+//         obj1.setAge(25);
+//         obj.setName("Navin");
+//         obj1.setName("Kiran");
 
-        int stud1Age = obj.getAge();
-        System.out.println(stud1Age);
+//         int stud1Age = obj.getAge();
+//         System.out.println(stud1Age);
 
-        int stud2Age = obj1.getAge();
-        System.out.println(stud2Age);
+//         int stud2Age = obj1.getAge();
+//         System.out.println(stud2Age);
 
-    }
-}
+//     }
+// }
