@@ -59,4 +59,4 @@
 
 
 // Question 6. T(n) = 2T(n/2) + K, Solve using Recurrence tree method. 
-// Ans: T(n) -> T(n/2) + T(n/2) + k, where T(n/2) -> T(n/4) + T(n/4) + k ans so on , therefore we get (2^0)k, (2^0 + 2^1)k, (2^0 + 2^1 + 2^2)k , ... till kth term , where the value of k is log(base 2)n by putting n/2^k = 1 so we get the gp series as  (2^0)k + (2^0 + 2^1)k + (2^0 + 2^1 + 2^2)k + ... + (2^0 + 2^1 + ... + 2^(k-1))k => so for worst time complexity we will take only last term ie. (2^0 + 2^1 + ... + 2^(k-1))k here putting the value of k here then we get, (2^0 + 2^1 + ... + 2^(log(base 2)n-1))*log(base 2)n => (2^(log(base 2)n - 1))*log(base 2)n by using sum of gp series after solving these we get (n-1)*log(base 2)n => O(n*log(base 2)n)
+// Ans: T(n) -> T(n/2) + T(n/2) + k, where T(n/2) -> T(n/4) + T(n/4) + k ans so on , therefore we get k, 2k, 4k , ... till kth term , where the value of k is log(base 2)n by putting n/2^k = 1 so we get the gp series as  k + 2k + 4k + ...+ log(n) times + O(1) * n =>  K(2^0 + 2^1 + 2^2 + ....+ log(n) times + O(n) =>   K * (1 / (2 - 1)) + O(n) =>  K + O(n) => T(n) = O(n)
