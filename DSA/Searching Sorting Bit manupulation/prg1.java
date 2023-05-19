@@ -200,3 +200,234 @@
 //         System.out.println(isPerfectSquare(target));
 //     }    
 // }
+
+
+
+
+
+
+
+
+
+
+// Ans 01, 02, 03: 
+// public class prg2 {
+
+//     public static void displayArray(int[] arr) {
+//         for (int i = 0; i < arr.length; i++) {
+//             System.out.print(arr[i] + "  ");
+//         }
+//         System.out.println();
+//     }
+
+//     public static void bubbleSort(int[] arr) {
+//         boolean flag = false;
+
+//         for (int i = 0; i < arr.length-1; i++) {
+//             flag = false;
+//             for (int j = 0; j < arr.length - i - 1; j++) {
+//                 if(arr[j] < arr[j+1]) {
+//                     arr[j] = arr[j] + arr[j+1] - (arr[j+1] = arr[j]);
+//                     flag = true;
+//                 }
+//             }
+//             if(!flag) 
+//                 break;
+//         }
+//     }
+
+//     public static void selectionSort(int[] arr) {
+//         int max = 0;
+
+//         for (int i = 0; i < arr.length-1; i++) {
+//             max = i;
+//             for (int j = i+1; j < arr.length; j++) {
+//                 if(arr[max] < arr[j]) {
+//                     max = j;
+//                 }
+//             }
+//             if(max != i)
+//                 arr[max] = arr[i] + arr[max] - (arr[i] = arr[max]);
+//         }
+//     }
+
+
+//     public static void insertionSort(int[] arr) {
+//         for (int i = 1; i < arr.length; i++) {
+//             for (int j = i; j > 0; j--) {
+//                 if (arr[j-1] < arr[j]) {
+//                     arr[j] = arr[j] + arr[j-1] - (arr[j-1] = arr[j]);
+//                 }
+//             }
+//         }
+//     }
+
+//     public static void main(String[] args) {
+//         int[] arr = {3, 5, 1, 6, 0};
+//         displayArray(arr);
+//         bubbleSort(arr);
+//         displayArray(arr);
+
+        
+//         System.out.println();
+//         int[] arr1 = {3, 5, 1, 6, 0};
+//         displayArray(arr1);
+//         selectionSort(arr1);
+//         displayArray(arr1);
+
+
+//         System.out.println();
+//         int[] arr2 = {3, 5, 1, 6, 0};
+//         displayArray(arr2);
+//         insertionSort(arr2);
+//         displayArray(arr2);  
+//     }
+// }
+
+
+
+
+// Ans 04: 
+// 1 => [3, 5], 1, 6, 0
+// 2 => 5, [3, 1], 6, 0
+// 3 => 5, 3, [1, 6], 0
+// 4 => 5, 3, 6, [1, 0]
+// 5 => [5, 3], 6, 1, 0
+// 6 => 5, [3, 6], 1, 0
+// 7 => 5, 6, [3, 1], 0
+// 8 => [5, 6], 3, 1, 0
+// 9 => 6, [5, 3], 1, 0 => sorted
+// 10 => [6, 5], 3, 1, 0
+// => 6, 5, 3, 1, 0
+
+
+
+// Ans 05: 
+// 1 => [3], [5], 1, 6, 0
+// 2 => [5], 3, [1], 6, 0
+// 3 => [5], 3, 1, [6], 0
+// 4 => [6], 3, 1, 5, [0]
+// 5 => 6, [3], [1], 5, 0
+// 6 => 6, [3], 1, [5], 0
+// 7 => 6, [5], 1, 3, [0]
+// 8 => 6, 5, [1], [3], 0
+// 9 => 6, 5, [3], 1, [0] => sorted
+// 10 => 6, 5, 3, [1], [0]
+// = 6, 5, 3, 1, 0 
+
+
+
+
+
+
+
+
+
+
+
+// Ans 01: 
+// public class prg3 {
+//     public static void main(String[] args) {
+//         // int number = 5;
+//         // int number = 10;
+//         int number = 64;
+//         int result = 0;
+
+//         if ((number & 1) == 0) { // for even numbers 
+//             result = 1;
+//             while (number > 0) {
+//                 int temp = number%2;
+//                 result = result*10 + temp;
+//                 number /= 2;
+//             }
+//             result /= 10;
+//         }
+//         else { // for odd numbers 
+//             while (number > 0) {
+//                 int temp = number%2;
+//                 result = result*10 + temp;
+//                 number /= 2;
+//             }
+//         }
+
+
+//         System.out.println(result);
+//     }
+// }
+
+
+
+
+// Ans 02: 
+// public class prg3 {
+//     public static void main(String[] args) {
+//         int n = 8;
+//         // int n = 32;
+//         int count = 0;
+
+
+//         while (n > 0) {
+//             if (n%2 == 1)
+//                 count++;
+//             n /= 2; 
+//             if (count > 1) {
+//                 break;
+//             }
+//         }
+
+//         if (count == 1) {
+//             System.out.println(true);
+//         } else {
+//             System.out.println(false);
+//         }
+//     }    
+// }
+
+
+
+// Ans 03: 
+// public class prg3 {
+//     public static void main(String[] args) {
+//         int input = 8;
+//         // int input = 3; 
+
+//         if((input&1) == 0)
+//             System.out.println("Even");
+//         else
+//             System.out.println("Odd");
+//     }    
+// }
+
+
+
+// Ans 04: 
+// set bit means 1
+// public class prg3 {
+//     public static void main(String[] args) {
+//         // int n = 8;
+//         int n = 31;
+//         int count = 0;
+
+//         while (n > 0) {
+//             if (n%2 == 1)
+//                 count++;
+//             n /= 2; 
+//         }
+
+//         System.out.println(count);
+//     }    
+// }
+
+
+
+// Ans 05: => important, remember the logic here 
+// public class prg3 {
+//     public static void main(String[] args) {
+//         int[] arr = {4, 3, 6, 2, 6, 4, 2, 3, 4, 3, 3};
+//         int xorOfArray = 0;
+//         for (int i = 0; i < arr.length; i++) {
+//             xorOfArray = xorOfArray^arr[i];
+//         }
+//         System.out.println(xorOfArray);
+//     }    
+// }
