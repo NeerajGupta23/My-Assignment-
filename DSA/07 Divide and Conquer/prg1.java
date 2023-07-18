@@ -60,3 +60,17 @@ public class prg1 {
 
 
 
+// Ans 04 :
+// a.) Lomuto partition scheme
+
+
+
+// Ans 05 :
+// c) O(nlogn)
+
+
+
+// Ans 06 :
+// d) A random element
+
+
